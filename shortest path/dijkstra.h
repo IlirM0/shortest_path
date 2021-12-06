@@ -34,6 +34,9 @@ public:
     bool has_been_visited(node& visited_node);
     bool needs_visiting(node& visited_node);
     void dijkstra_routine();
+    dijkstra * get_dijkstra_at(int node_nr);
+    dijkstra * get_dijkstra_neighbour(int node_nr, int node_neighbour_nr);
+    dijkstra * get_dijkstra_from_node(node & the_node);
 };
 
 #endif //SHORTEST_PATH_DIJKSTRA_H

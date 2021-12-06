@@ -52,10 +52,10 @@ RM = "C:\Program Files\JetBrains\CLion 2021.2.2\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\ilir8\Desktop\shortest path"
+CMAKE_SOURCE_DIR = "C:\Users\ilir8\Documents\GitHub\shortest_path\shortest path"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\ilir8\Desktop\shortest path\cmake-build-debug"
+CMAKE_BINARY_DIR = "C:\Users\ilir8\Documents\GitHub\shortest_path\shortest path\cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/shortest_path.dir/depend.make
@@ -67,55 +67,55 @@ include CMakeFiles/shortest_path.dir/flags.make
 
 CMakeFiles/shortest_path.dir/main.cpp.obj: CMakeFiles/shortest_path.dir/flags.make
 CMakeFiles/shortest_path.dir/main.cpp.obj: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\ilir8\Desktop\shortest path\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/shortest_path.dir/main.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\shortest_path.dir\main.cpp.obj -c "C:\Users\ilir8\Desktop\shortest path\main.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\ilir8\Documents\GitHub\shortest_path\shortest path\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/shortest_path.dir/main.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\shortest_path.dir\main.cpp.obj -c "C:\Users\ilir8\Documents\GitHub\shortest_path\shortest path\main.cpp"
 
 CMakeFiles/shortest_path.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/shortest_path.dir/main.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\ilir8\Desktop\shortest path\main.cpp" > CMakeFiles\shortest_path.dir\main.cpp.i
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\ilir8\Documents\GitHub\shortest_path\shortest path\main.cpp" > CMakeFiles\shortest_path.dir\main.cpp.i
 
 CMakeFiles/shortest_path.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/shortest_path.dir/main.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\ilir8\Desktop\shortest path\main.cpp" -o CMakeFiles\shortest_path.dir\main.cpp.s
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\ilir8\Documents\GitHub\shortest_path\shortest path\main.cpp" -o CMakeFiles\shortest_path.dir\main.cpp.s
 
 CMakeFiles/shortest_path.dir/read_lines.cpp.obj: CMakeFiles/shortest_path.dir/flags.make
 CMakeFiles/shortest_path.dir/read_lines.cpp.obj: ../read_lines.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\ilir8\Desktop\shortest path\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/shortest_path.dir/read_lines.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\shortest_path.dir\read_lines.cpp.obj -c "C:\Users\ilir8\Desktop\shortest path\read_lines.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\ilir8\Documents\GitHub\shortest_path\shortest path\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/shortest_path.dir/read_lines.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\shortest_path.dir\read_lines.cpp.obj -c "C:\Users\ilir8\Documents\GitHub\shortest_path\shortest path\read_lines.cpp"
 
 CMakeFiles/shortest_path.dir/read_lines.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/shortest_path.dir/read_lines.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\ilir8\Desktop\shortest path\read_lines.cpp" > CMakeFiles\shortest_path.dir\read_lines.cpp.i
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\ilir8\Documents\GitHub\shortest_path\shortest path\read_lines.cpp" > CMakeFiles\shortest_path.dir\read_lines.cpp.i
 
 CMakeFiles/shortest_path.dir/read_lines.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/shortest_path.dir/read_lines.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\ilir8\Desktop\shortest path\read_lines.cpp" -o CMakeFiles\shortest_path.dir\read_lines.cpp.s
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\ilir8\Documents\GitHub\shortest_path\shortest path\read_lines.cpp" -o CMakeFiles\shortest_path.dir\read_lines.cpp.s
 
 CMakeFiles/shortest_path.dir/graph.cpp.obj: CMakeFiles/shortest_path.dir/flags.make
 CMakeFiles/shortest_path.dir/graph.cpp.obj: ../graph.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\ilir8\Desktop\shortest path\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/shortest_path.dir/graph.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\shortest_path.dir\graph.cpp.obj -c "C:\Users\ilir8\Desktop\shortest path\graph.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\ilir8\Documents\GitHub\shortest_path\shortest path\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/shortest_path.dir/graph.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\shortest_path.dir\graph.cpp.obj -c "C:\Users\ilir8\Documents\GitHub\shortest_path\shortest path\graph.cpp"
 
 CMakeFiles/shortest_path.dir/graph.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/shortest_path.dir/graph.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\ilir8\Desktop\shortest path\graph.cpp" > CMakeFiles\shortest_path.dir\graph.cpp.i
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\ilir8\Documents\GitHub\shortest_path\shortest path\graph.cpp" > CMakeFiles\shortest_path.dir\graph.cpp.i
 
 CMakeFiles/shortest_path.dir/graph.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/shortest_path.dir/graph.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\ilir8\Desktop\shortest path\graph.cpp" -o CMakeFiles\shortest_path.dir\graph.cpp.s
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\ilir8\Documents\GitHub\shortest_path\shortest path\graph.cpp" -o CMakeFiles\shortest_path.dir\graph.cpp.s
 
 CMakeFiles/shortest_path.dir/dijkstra.cpp.obj: CMakeFiles/shortest_path.dir/flags.make
 CMakeFiles/shortest_path.dir/dijkstra.cpp.obj: ../dijkstra.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\ilir8\Desktop\shortest path\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/shortest_path.dir/dijkstra.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\shortest_path.dir\dijkstra.cpp.obj -c "C:\Users\ilir8\Desktop\shortest path\dijkstra.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\ilir8\Documents\GitHub\shortest_path\shortest path\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/shortest_path.dir/dijkstra.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\shortest_path.dir\dijkstra.cpp.obj -c "C:\Users\ilir8\Documents\GitHub\shortest_path\shortest path\dijkstra.cpp"
 
 CMakeFiles/shortest_path.dir/dijkstra.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/shortest_path.dir/dijkstra.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\ilir8\Desktop\shortest path\dijkstra.cpp" > CMakeFiles\shortest_path.dir\dijkstra.cpp.i
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\ilir8\Documents\GitHub\shortest_path\shortest path\dijkstra.cpp" > CMakeFiles\shortest_path.dir\dijkstra.cpp.i
 
 CMakeFiles/shortest_path.dir/dijkstra.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/shortest_path.dir/dijkstra.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\ilir8\Desktop\shortest path\dijkstra.cpp" -o CMakeFiles\shortest_path.dir\dijkstra.cpp.s
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\ilir8\Documents\GitHub\shortest_path\shortest path\dijkstra.cpp" -o CMakeFiles\shortest_path.dir\dijkstra.cpp.s
 
 # Object files for target shortest_path
 shortest_path_OBJECTS = \
@@ -135,7 +135,7 @@ shortest_path.exe: CMakeFiles/shortest_path.dir/build.make
 shortest_path.exe: CMakeFiles/shortest_path.dir/linklibs.rsp
 shortest_path.exe: CMakeFiles/shortest_path.dir/objects1.rsp
 shortest_path.exe: CMakeFiles/shortest_path.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\ilir8\Desktop\shortest path\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable shortest_path.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\ilir8\Documents\GitHub\shortest_path\shortest path\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable shortest_path.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\shortest_path.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -147,6 +147,6 @@ CMakeFiles/shortest_path.dir/clean:
 .PHONY : CMakeFiles/shortest_path.dir/clean
 
 CMakeFiles/shortest_path.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\ilir8\Desktop\shortest path" "C:\Users\ilir8\Desktop\shortest path" "C:\Users\ilir8\Desktop\shortest path\cmake-build-debug" "C:\Users\ilir8\Desktop\shortest path\cmake-build-debug" "C:\Users\ilir8\Desktop\shortest path\cmake-build-debug\CMakeFiles\shortest_path.dir\DependInfo.cmake" --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\ilir8\Documents\GitHub\shortest_path\shortest path" "C:\Users\ilir8\Documents\GitHub\shortest_path\shortest path" "C:\Users\ilir8\Documents\GitHub\shortest_path\shortest path\cmake-build-debug" "C:\Users\ilir8\Documents\GitHub\shortest_path\shortest path\cmake-build-debug" "C:\Users\ilir8\Documents\GitHub\shortest_path\shortest path\cmake-build-debug\CMakeFiles\shortest_path.dir\DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/shortest_path.dir/depend
 

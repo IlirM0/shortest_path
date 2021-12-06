@@ -19,7 +19,7 @@ int main() {
 
     dijkstra_list d{g.get_graph()->at(1), g};
 
-    std::cout << d.get_dijkstra_list()->at(1).get_dist()<< '\n';
+    std::cout << d.get_dijkstra_list()->at(0).get_dist()<< '\n';
 
 
 

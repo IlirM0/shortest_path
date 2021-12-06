@@ -8,10 +8,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/ilir8/Desktop/shortest path/dijkstra.cpp" "C:/Users/ilir8/Desktop/shortest path/cmake-build-debug/CMakeFiles/shortest_path.dir/dijkstra.cpp.obj"
-  "C:/Users/ilir8/Desktop/shortest path/graph.cpp" "C:/Users/ilir8/Desktop/shortest path/cmake-build-debug/CMakeFiles/shortest_path.dir/graph.cpp.obj"
-  "C:/Users/ilir8/Desktop/shortest path/main.cpp" "C:/Users/ilir8/Desktop/shortest path/cmake-build-debug/CMakeFiles/shortest_path.dir/main.cpp.obj"
-  "C:/Users/ilir8/Desktop/shortest path/read_lines.cpp" "C:/Users/ilir8/Desktop/shortest path/cmake-build-debug/CMakeFiles/shortest_path.dir/read_lines.cpp.obj"
+  "C:/Users/ilir8/Documents/GitHub/shortest_path/shortest path/dijkstra.cpp" "C:/Users/ilir8/Documents/GitHub/shortest_path/shortest path/cmake-build-debug/CMakeFiles/shortest_path.dir/dijkstra.cpp.obj"
+  "C:/Users/ilir8/Documents/GitHub/shortest_path/shortest path/graph.cpp" "C:/Users/ilir8/Documents/GitHub/shortest_path/shortest path/cmake-build-debug/CMakeFiles/shortest_path.dir/graph.cpp.obj"
+  "C:/Users/ilir8/Documents/GitHub/shortest_path/shortest path/main.cpp" "C:/Users/ilir8/Documents/GitHub/shortest_path/shortest path/cmake-build-debug/CMakeFiles/shortest_path.dir/main.cpp.obj"
+  "C:/Users/ilir8/Documents/GitHub/shortest_path/shortest path/read_lines.cpp" "C:/Users/ilir8/Documents/GitHub/shortest_path/shortest path/cmake-build-debug/CMakeFiles/shortest_path.dir/read_lines.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

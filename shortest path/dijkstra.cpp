@@ -61,17 +61,44 @@ void dijkstra_list::dijkstra_routine() // the dijkstra algorithm.
 {
     for (int i = 0; i < m_dijkstra_list.size(); ++i) // go through all the members of dijkstra list
     {
-        // go through all the neighbours of the node
-//        for (int j = 0; j < m_dijkstra_list.at(i).get_node()->get_list_of_destinations().size(); ++j) {
-//            m_dijkstra_list.at(i).get_node()->get_list_of_destinations().at(j).distance()
+         //go through all the neighbours of the node
+//        for (int j = 0; j < m_dijkstra_list.at(i).get_node()->get_list_of_destinations().size(); ++j)
+//        {
+//            //this->get_dijkstra_neighbour(i,j);
 //        }
-
-
-
     }
 }
 
 node *dijkstra::get_node()
 {
     return m_node;
+}
+
+dijkstra * dijkstra_list::get_dijkstra_at(int node_nr)
+{
+    return& m_dijkstra_list.at(node_nr);
+}
+
+dijkstra *dijkstra_list::get_dijkstra_neighbour(int node_nr, int node_neighbour_nr)
+{
+    for (int i = 0; i < m_dijkstra_list.size(); ++i) {
+        if (m_dijkstra_list.at(i).get_node() == &m_dijkstra_list.at(node_nr).get_node()->get_list_of_destinations().at(node_neighbour_nr).destination_node())
+        {
+            return &m_dijkstra_list.at(i);
+        }
+    }
+    return nullptr;
+//     m_dijkstra_list.at(node_nr).get_node()->get_list_of_destinations().at(node_neighbour_nr);
+}
+
+dijkstra *dijkstra_list::get_dijkstra_from_node(node &the_node)
+{
+    for (int i = 0; i < m_dijkstra_list.size(); ++i) {
+        if (m_dijkstra_list.at(i).get_node() == &the_node)
+        {
+            return &m_dijkstra_list.at(i);
+        }
+    }
+
+    return nullptr;
 }
