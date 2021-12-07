@@ -23,6 +23,8 @@ public:
     void set_previous_node(node * prev_node);
     bool get_visited();
     void set_visited_true();
+    int get_name();
+
 };
 
 class dijkstra_list
@@ -43,6 +45,7 @@ public:
     dijkstra * get_dijkstra_neighbour(int node_nr, int node_neighbour_nr);
     dijkstra * get_dijkstra_from_node(node & the_node);
     bool has_unvisited();
+    dijkstra * give_next_unexplored_shortest();
 };
 
 #endif //SHORTEST_PATH_DIJKSTRA_H

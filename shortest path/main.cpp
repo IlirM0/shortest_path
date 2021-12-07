@@ -14,12 +14,18 @@ int main() {
 
     graph g{*paths};
 
-    std::cout << g.get_dir_distance(3,4) << '\n';
-    std::cout << g.get_name_at(4) << '\n';
+    //std::cout << g.get_dir_distance(3,4) << '\n';
+    //std::cout << g.get_name_at(4) << '\n';
 
     dijkstra_list d{g.get_graph()->at(1), g};
 
-    std::cout << d.get_dijkstra_list()->at(0).get_dist()<< '\n';
+    std::cout << "pre-dijkstra: " <<d.get_dijkstra_list()->at(2).get_dist()<< '\n';
+
+    d.dijkstra_routine();
+
+    std::cout << "post-dijkstra: " << d.get_dijkstra_list()->at(2).get_dist()<< '\n';
+
+
 
 
 

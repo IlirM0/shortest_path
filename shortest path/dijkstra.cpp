@@ -61,59 +61,25 @@ int dijkstra::get_dist()
 
 void dijkstra_list::dijkstra_routine() // the dijkstra algorithm.
 {
-    dijkstra * current_dijkstra_node = this->get_dijkstra_from_node(*m_root_node);
-    dijkstra * shortest_next_dijkstra = nullptr;
-
+    dijkstra * current_node = this->give_next_unexplored_shortest();
+    //std::cout << "hal;p" << '\n';
     while(this->has_unvisited())
     {
-        for (int i = 0; i < current_dijkstra_node->get_node()->get_list_of_destinations().size(); ++i)
-        { // go through the list of destination nodes.
-            if (!this->get_dijkstra_from_node(current_dijkstra_node->get_node()->get_list_of_destinations().at(
-                    i).get_node_destination())->get_visited()) // if this node has been visited before then ignore it.
-            {
-                if (shortest_next_dijkstra != nullptr) // if this is not the first thing done (not root node)
-                {
-                    this->get_dijkstra_from_node(current_dijkstra_node->get_node()->get_list_of_destinations().at(i).get_node_destination())->set_distance(current_dijkstra_node->get_node()->get_list_of_destinations().at(i).distance());
-                    //set the distance from root NEED TO ADD THE BASE ROOT DIFF
-                }
-                if ((current_dijkstra_node->get_node()->get_list_of_destinations().at(i).distance() < shortest_next_dijkstra->get_dist() && !this->get_dijkstra_from_node(current_dijkstra_node->get_node()->get_list_of_destinations().at(i).get_node_destination())->get_visited()) || shortest_next_dijkstra ==
-                                                                                                                                           nullptr) // get the shortest distance to neighbour
-                {
-                    shortest_next_dijkstra = this->get_dijkstra_from_node(current_dijkstra_node->get_node()->get_list_of_destinations().at(i).get_node_destination());
+        std::cout << "hal;p" << '\n';
+        current_node->set_visited_true();
+        for (int i = 0; i < current_node->get_node()->get_list_of_destinations().size(); ++i)
+        {
+            if (!this->get_dijkstra_from_node(current_node->get_node()->get_list_of_destinations().at(i).get_node_destination())->get_visited())
+            { // ga naar elke neighbour
+                if (this->get_dijkstra_from_node(current_node->get_node()->get_list_of_destinations().at(i).get_node_destination())->get_dist() > (current_node->get_dist() + current_node->get_node()->get_list_of_destinations().at(i).distance()))
+                { // kijk of current dist groter is. zo ja, verander.
+                    this->get_dijkstra_from_node(current_node->get_node()->get_list_of_destinations().at(i).get_node_destination())->set_distance(current_node->get_dist() + current_node->get_node()->get_list_of_destinations().at(i).distance());
                 }
             }
-
         }
-        current_dijkstra_node->set_visited_true();
-        current_dijkstra_node = shortest_next_dijkstra;
-        shortest_next_dijkstra = nullptr;
+        current_node = this->give_next_unexplored_shortest();
     }
 
-
-//    for (int i = 0; i < m_dijkstra_list.at(0).get_node()->get_list_of_destinations().size(); ++i) {
-//        this->get_dijkstra_from_node(*m_dijkstra_list.at(i).get_node())->set_distance(m_dijkstra_list.at(0).get_node()->get_list_of_destinations().at(i).distance());
-//        if (m_dijkstra_list.at(0).get_node()->get_list_of_destinations().at(i).distance() < shortest_dijkstra->get_dist() || shortest_dijkstra ==
-//                                                                                                                                     nullptr)
-//        {
-//            shortest_dijkstra = &m_dijkstra_list.at(i);
-//        }
-//
-//
-//    }
-    //m_dijkstra_list.at(0).get_node()->get_list_of_destinations()
-
-
-
-
-
-//    for (int i = 0; i < m_dijkstra_list.size(); ++i) // go through all the members of dijkstra list
-//    {
-//         //go through all the neighbours of the node
-//        for (int j = 0; j < m_dijkstra_list.at(i).get_node()->get_list_of_destinations().size(); ++j)
-//        {
-//            //this->get_dijkstra_neighbour(i,j);
-//        }
-//    }
 }
 
 node *dijkstra::get_node()
@@ -179,4 +145,24 @@ bool dijkstra_list::has_unvisited()
         }
     }
     return false;
+}
+
+dijkstra *dijkstra_list::give_next_unexplored_shortest()
+{
+    dijkstra * dijkstra_to_send = nullptr;
+    for (int i = 0; i < m_dijkstra_list.size(); ++i) {
+        if (!m_dijkstra_list.at(i).get_visited())
+        {
+            if (dijkstra_to_send == nullptr || m_dijkstra_list.at(i).get_dist() < dijkstra_to_send->get_dist())
+            {
+                dijkstra_to_send = &m_dijkstra_list.at(i);
+            }
+        }
+    }
+    return dijkstra_to_send;
+}
+
+int dijkstra::get_name()
+{
+    return m_node->name();
 }
