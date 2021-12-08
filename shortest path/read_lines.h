@@ -22,7 +22,7 @@ public:
     int distance();
 };
 
-std::vector<path> * read_distribute(std::ifstream & file);
+std::vector<path>* read_distribute(std::ifstream & file);
 
 path create_path(std::string line);
 

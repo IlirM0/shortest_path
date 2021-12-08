@@ -20,8 +20,8 @@ int path::distance()
     return m_distance;
 }
 
-std::vector<path> * read_distribute(std::ifstream & file) {
-    auto *paths = new std::vector<path>;
+std::vector<path>* read_distribute(std::ifstream & file) {
+    auto paths = new std::vector<path>;
     if (file.is_open()) {
         std::string line;
 
@@ -36,7 +36,7 @@ std::vector<path> * read_distribute(std::ifstream & file) {
         }
         return paths;
     }
-    return nullptr;
+    //return nullptr;
 }
 
 path create_path(std::string line)

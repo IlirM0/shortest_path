@@ -6,21 +6,31 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/ilir8/Documents/GitHub/shortest_path/shortest path/dijkstra.cpp
-dijkstra.h
-C:/Users/ilir8/Documents/GitHub/shortest_path/shortest path/dijkstra.h
-limits
--
-
 C:/Users/ilir8/Documents/GitHub/shortest_path/shortest path/dijkstra.h
 graph.h
 C:/Users/ilir8/Documents/GitHub/shortest_path/shortest path/graph.h
+limits
+-
 
 C:/Users/ilir8/Documents/GitHub/shortest_path/shortest path/graph.h
 vector
 -
 read_lines.h
 C:/Users/ilir8/Documents/GitHub/shortest_path/shortest path/read_lines.h
+
+C:/Users/ilir8/Documents/GitHub/shortest_path/shortest path/main.cpp
+iostream
+-
+fstream
+-
+vector
+-
+read_lines.h
+C:/Users/ilir8/Documents/GitHub/shortest_path/shortest path/read_lines.h
+graph.h
+C:/Users/ilir8/Documents/GitHub/shortest_path/shortest path/graph.h
+dijkstra.h
+C:/Users/ilir8/Documents/GitHub/shortest_path/shortest path/dijkstra.h
 
 C:/Users/ilir8/Documents/GitHub/shortest_path/shortest path/read_lines.h
 iostream

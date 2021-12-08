@@ -15,7 +15,7 @@ graph::graph(std::vector<path> &paths)
                 //std::cout << "to and from exist" << '\n';
 
 
-                node_destination note_to_add{exists(paths.at(i).to()),
+                node_destination *note_to_add = new node_destination{exists(paths.at(i).to()),
                                              paths.at(i).distance(), paths.at(i).to()}; // create node_destination
 
                 exists(paths.at(i).from())->add_node_destination(
@@ -28,7 +28,7 @@ graph::graph(std::vector<path> &paths)
                 m_graph.push_back(to_node);
                 m_nodes_size++;
 
-                node_destination note_to_add{exists(paths.at(i).to()),
+                node_destination *note_to_add = new node_destination{exists(paths.at(i).to()),
                                              paths.at(i).distance(), paths.at(i).to()}; // create node_destination
 
                 exists(paths.at(i).from())->add_node_destination(note_to_add);
@@ -43,7 +43,7 @@ graph::graph(std::vector<path> &paths)
                 m_graph.push_back(from_node);
                 m_nodes_size++;
 
-                node_destination note_to_add{exists(paths.at(i).to()),
+                node_destination * note_to_add = new node_destination{exists(paths.at(i).to()),
                                              paths.at(i).distance(), paths.at(i).to()}; // create node_destination
 
                 exists(paths.at(i).from())->add_node_destination(note_to_add);
@@ -58,7 +58,7 @@ graph::graph(std::vector<path> &paths)
                 m_graph.push_back(to_node);
                 m_nodes_size++;
 
-                node_destination note_to_add{exists(paths.at(i).to()),
+                node_destination *note_to_add = new node_destination{exists(paths.at(i).to()),
                                              paths.at(i).distance(), paths.at(i).to()}; // create node_destination
 
                 exists(paths.at(i).from())->add_node_destination(note_to_add);
@@ -93,9 +93,9 @@ void graph::add_node(node add_node)
     m_graph.push_back(add_node);
 }
 
-void node::add_node_destination(node_destination node_destination_add)
+void node::add_node_destination(node_destination *node_destination_add)
 {
-    m_list_of_destinations.push_back(node_destination_add);
+    m_list_of_destinations.push_back(*node_destination_add);
 }
 
 node_destination::node_destination(node *destination_node, int distance, int dest_node_name): m_destination_node{destination_node}, m_distance{distance}, m_dest_node_name{dest_node_name}
@@ -200,3 +200,4 @@ std::vector<node_destination> &node::get_list_of_destinations()
 {
     return m_list_of_destinations;
 }
+

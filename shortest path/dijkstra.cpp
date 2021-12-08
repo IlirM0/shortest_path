@@ -3,12 +3,12 @@
 //
 
 #include "dijkstra.h"
-#include <limits>
+
 
 dijkstra::dijkstra(node * this_node, int distance, node * prev_node): m_node{this_node}, m_distance_from_root_node{distance}, m_previous_node{prev_node}, m_visited{false}
 {}
 
-dijkstra_list::dijkstra_list(node &root_node, graph &d_graph): m_root_node{&root_node}
+dijkstra_list::dijkstra_list(node &root_node, graph &d_graph): m_root_node{&root_node}, m_root_node_name{root_node.name()}
 {
     dijkstra temp_dijkstra{&root_node, 0, nullptr};
     //temp_dijkstra.set_visited_true(); //set to visited, since this one doesnt need visiting.
@@ -65,25 +65,38 @@ void dijkstra_list::dijkstra_routine() // the dijkstra algorithm.
     //std::cout << "hal;p" << '\n';
     while(this->has_unvisited())
     {
-        std::cout << "hal;p" << '\n';
+
         current_node->set_visited_true();
+
         for (int i = 0; i < current_node->get_node()->get_list_of_destinations().size(); ++i)
         {
-            if (!this->get_dijkstra_from_node(current_node->get_node()->get_list_of_destinations().at(i).get_node_destination())->get_visited())
+            //std::cout << "get vvisited: " <<get_dijkstra_from_node(&current_node->get_node()->get_list_of_destinations().at(i).get_node_destination())->get_visited() << '\n';
+
+            if (!get_dijkstra_from_name(current_node->get_node()->get_list_of_destinations().at(i).destination_node_name())->get_visited())
             { // ga naar elke neighbour
-                if (this->get_dijkstra_from_node(current_node->get_node()->get_list_of_destinations().at(i).get_node_destination())->get_dist() > (current_node->get_dist() + current_node->get_node()->get_list_of_destinations().at(i).distance()))
+//                if (current_node->get_name() == get_root_node_name())
+//                {
+//
+//                }
+                if (get_dijkstra_from_name(current_node->get_node()->get_list_of_destinations().at(i).destination_node_name())->get_dist() > (current_node->get_dist() + current_node->get_node()->get_list_of_destinations().at(i).distance()))
                 { // kijk of current dist groter is. zo ja, verander.
-                    this->get_dijkstra_from_node(current_node->get_node()->get_list_of_destinations().at(i).get_node_destination())->set_distance(current_node->get_dist() + current_node->get_node()->get_list_of_destinations().at(i).distance());
+//                    std::cout << "NAME OF DIJSKTRA: " << get_dijkstra_from_name(current_node->get_node()->get_list_of_destinations().at(i).destination_node_name())->get_name() << '\n';
+//                    std::cout << "DISTANCE TO ADD: "<< current_node->get_dist() + current_node->get_node()->get_list_of_destinations().at(i).distance() << '\n';
+                    get_dijkstra_from_name(current_node->get_node()->get_list_of_destinations().at(i).destination_node_name())->set_distance(current_node->get_dist() + current_node->get_node()->get_list_of_destinations().at(i).distance());
+                    get_dijkstra_from_name(current_node->get_node()->get_list_of_destinations().at(i).destination_node_name())->set_previous_node_name(current_node->get_name());
+
                 }
             }
         }
         current_node = this->give_next_unexplored_shortest();
     }
+    get_dijkstra_from_name(m_root_node_name)->set_previous_node_name(m_root_node_name);
 
 }
 
 node *dijkstra::get_node()
 {
+    //std::cout << m_node->name() << "\n";
     return m_node;
 }
 
@@ -104,15 +117,16 @@ dijkstra *dijkstra_list::get_dijkstra_neighbour(int node_nr, int node_neighbour_
 //     m_dijkstra_list.at(node_nr).get_node()->get_list_of_destinations().at(node_neighbour_nr);
 }
 
-dijkstra *dijkstra_list::get_dijkstra_from_node(node &the_node)
+dijkstra *dijkstra_list::get_dijkstra_from_node(node * the_node)
 {
-    for (int i = 0; i < m_dijkstra_list.size(); ++i) {
-        if (m_dijkstra_list.at(i).get_node() == &the_node)
+    //std::cout << the_node->name() << '\n';
+    for (auto & i : m_dijkstra_list) {
+
+        if (i.get_node() == the_node)
         {
-            return &m_dijkstra_list.at(i);
+            return &i;
         }
     }
-
     return nullptr;
 }
 
@@ -165,4 +179,48 @@ dijkstra *dijkstra_list::give_next_unexplored_shortest()
 int dijkstra::get_name()
 {
     return m_node->name();
+}
+
+dijkstra *dijkstra_list::get_dijkstra_from_name(int name)
+{
+    //std::cout << the_node->name() << '\n';
+    for (auto & i : m_dijkstra_list) {
+
+        if (i.get_name() == name)
+        {
+            return &i;
+        }
+    }
+    return nullptr;
+}
+
+int dijkstra::get_previous_node_name()
+{
+    return m_previous_node_name;
+}
+
+void dijkstra::set_previous_node_name(int name)
+{
+    m_previous_node_name = name;
+}
+
+int dijkstra_list::get_root_node_name()
+{
+    return m_root_node_name;
+}
+
+void dijkstra_list::give_path_to_root(int last_node_name)
+{
+    dijkstra * current_dijkstra = get_dijkstra_from_name(last_node_name);
+    //std::cout << "path: ";
+    if (current_dijkstra->get_name() != m_root_node_name)
+    {
+        dijkstra_list::give_path_to_root(current_dijkstra->get_previous_node_name());
+        std::cout<< current_dijkstra->get_name() << '-';
+    }
+    else
+    {
+        std::cout << last_node_name << '-';
+    }
+    //std::cout << '\n';
 }

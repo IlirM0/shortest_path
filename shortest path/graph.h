@@ -7,6 +7,7 @@
 
 #include <vector>
 #include "read_lines.h"
+//#include "dijkstra.h"
 
 class node_destination;
 class node;
@@ -35,7 +36,7 @@ private:
 public:
     int name();
     node(int name);
-    void add_node_destination(node_destination node_destination_add);
+    void add_node_destination(node_destination * node_destination_add);
     int search_distance(int name_to);
     std::vector<node_destination>& get_list_of_destinations();
 };
@@ -54,6 +55,7 @@ public:
     int get_name_at(int at);
     bool element_exists(int size);
     std::vector<node>* get_graph();
+
 };
 
 
