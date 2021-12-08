@@ -49,8 +49,8 @@ int main() {
 //
 //    }
 
-    d.give_path_to_root(2);
-
+   // d.give_path_to_root(5);
+    d.make_output_file();
 
     return 0;
 }

@@ -212,15 +212,70 @@ int dijkstra_list::get_root_node_name()
 void dijkstra_list::give_path_to_root(int last_node_name)
 {
     dijkstra * current_dijkstra = get_dijkstra_from_name(last_node_name);
+    std::vector<int> routes;
     //std::cout << "path: ";
     if (current_dijkstra->get_name() != m_root_node_name)
     {
-        dijkstra_list::give_path_to_root(current_dijkstra->get_previous_node_name());
+        give_path_to_root(current_dijkstra->get_previous_node_name());
         std::cout<< current_dijkstra->get_name() << '-';
     }
     else
     {
-        std::cout << last_node_name << '-';
+        routes.push_back(last_node_name);
+        std::cout << "route: ";
+        for (int i = 0; i < routes.size(); ++i)
+        {
+            std::cout << routes.at(0) << ", ";
+        }
+        //std::cout << '\n';
     }
+
     //std::cout << '\n';
+}
+
+void dijkstra_list::give_path_to_root(int last_node_name, std::vector<int> * list)
+{
+    dijkstra * current_dijkstra = get_dijkstra_from_name(last_node_name);
+    if (current_dijkstra->get_name() != m_root_node_name)
+    {
+        list->push_back(last_node_name);
+        give_path_to_root(current_dijkstra->get_previous_node_name(), list);
+        //std::cout<< current_dijkstra->get_name() << '-';
+    }
+    else
+    {
+        list->push_back(last_node_name);
+//        std::cout << "route: ";
+//        for (int i = 0; i < routes.size(); ++i)
+//        {
+//            std::cout << routes.at(0) << ", ";
+//        }
+        //std::cout << '\n';
+    }
+}
+
+void dijkstra_list::make_output_file()
+{
+    std::ofstream output_file{"output.txt"};
+
+
+    for (int j = 0; j < m_dijkstra_list.size(); ++j)
+    {
+        std::vector<int> list_of_output;
+        give_path_to_root(m_dijkstra_list.at(j).get_name(), &list_of_output);
+        output_file << "path from " << m_root_node_name << " to " << m_dijkstra_list.at(j).get_name() << ": ";
+        for (int i = (list_of_output.size()-1); i >= 0 ; --i) {
+            if (i != 0)
+            {
+                output_file << list_of_output.at(i) << ", ";
+            }
+            else
+            {
+                output_file << list_of_output.at(i);
+            }
+        }
+        output_file << "\ttotal distance: " << m_dijkstra_list.at(j).get_dist()<< '\n';
+    }
+
+    output_file.close();
 }

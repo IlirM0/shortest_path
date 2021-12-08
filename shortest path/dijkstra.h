@@ -7,6 +7,7 @@
 
 #include "graph.h"
 #include <limits>
+#include <fstream>
 
 class dijkstra;
 class dijkstra_list;
@@ -60,6 +61,8 @@ public:
     dijkstra * give_next_unexplored_shortest();
     int get_root_node_name();
     void give_path_to_root(int last_node_name);
+    void give_path_to_root(int last_node_name, std::vector<int> * list);
+    void make_output_file();
 };
 
 #endif //SHORTEST_PATH_DIJKSTRA_H
