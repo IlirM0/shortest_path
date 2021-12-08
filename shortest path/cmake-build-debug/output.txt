@@ -1,0 +1,5 @@
+path from 5 to 5: 5	total distance: 0
+path from 5 to 1: 5, 3, 1	total distance: 932
+path from 5 to 2: 5, 3, 1, 2	total distance: 1735
+path from 5 to 3: 5, 3	total distance: 774
+path from 5 to 6: 5, 3, 1, 6	total distance: 1564
