@@ -14,7 +14,7 @@
 
 # Finding the shortest path
 ### 1. Introduction
-Finding the shortest path is useful in many situations, for example: Finding your way home from an unknown location, or making an enemy walk towards a player in a videogame.
+Finding the shortest path is useful in many situations, for example: Finding your way home from an unknown location or making an enemy walk towards a player in a video game.
 
 These matters can be calculated by the use of algorithms. The algorithms looked at in this study are Dijkstra and A*.
 
@@ -63,7 +63,7 @@ a node_name node_connection distance
 ```
 
 #### 2.2 Our implementation
-The implementation used for this study is split into 4 parts and 3 cpp files. First it reads the lines of the input file and creates paths from it, second it creates the graph from the paths, third it creates a Dijkstra list and performs the Dijkstra algorithm, and fourth it prints out all the shortests paths from every node to the root node to an output.txt file.
+The implementation used for this study is split into 4 parts and 3 cpp/header files. First it reads the lines of the input file and creates paths from it, second it creates the graph from the paths, third it creates a Dijkstra list and performs the Dijkstra algorithm, and fourth it prints out all the shortests paths from every node to the root node to an output.txt file.
 
 ##### Part 1: Creating the path objects
 
