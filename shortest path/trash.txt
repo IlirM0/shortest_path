@@ -1,3 +1,7 @@
+//
+// this was code that used to be used, and didnt want to use anymore, but we also didnt want to throw it away or keep it as a command in the main.cpp
+//
+
 //    dijkstra * current_dijkstra_node = this->get_dijkstra_from_node(*m_root_node);
 //    dijkstra * shortest_next_dijkstra = nullptr;
 //
