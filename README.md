@@ -63,7 +63,7 @@ a node_name node_connection distance
 ```
 
 #### 2.2 Our implementation
-The implementation used for this study is split into 4 parts and 3 cpp/header files. First it reads the lines of the input file and creates paths from it, second it creates the graph from the paths, third it creates a Dijkstra list and performs the Dijkstra algorithm, and fourth it prints out all the shortests paths from every node to the root node to an output.txt file.
+The implementation used for this study is split into 4 parts and 3 cpp/header files. First it reads the lines of the input file and creates paths from it, second it creates the graph from the paths, third it creates a Dijkstra list and performs the Dijkstra algorithm, and fourth it prints out all the shortest paths from every node to the root node to an output.txt file.
 
 ##### Part 1: Creating the path objects
 
@@ -116,7 +116,7 @@ graph g{*paths};
 <p class="figure">Figure 7, Exists function, looks through graph to see if a node object already exists, if it does it returns a pointer to it, else gives back nullpointer.</p>
 
 
-In the graph constructor, see figure 6, it goes through the list of paths it has been given and create nodes if they dont exists yet, see figure 7, and connect node destinations to their nodes. Then it adds the node to its vector for easy access.
+In the graph constructor, see figure 6, it goes through the list of paths it has been given and create nodes if they don't exists yet, see figure 7, and connect node destinations to their nodes. Then it adds the node to its vector for easy access.
 
 ##### Part 3: Creating Dijkstra lists
 
@@ -139,7 +139,7 @@ When the Dijkstra list is initialized it creates all the Dijkstra objects, see f
 
 <p class="figure">Figure 9, Initializing the Dijkstra list for relaxation</p>
 
-Once the Dijkstra lijst had been made the Dijkstra routine can be called.
+Once the Dijkstra list had been made the Dijkstra routine can be called.
 
 ```cpp=
 // called in main.cpp
@@ -191,11 +191,11 @@ Like Dijkstra, A* works with graphs based on vertices and edges. By relaxing ver
 
 The difference however is that A* uses two more values per vertex to establish the linear distance between the end node and every other node in the graph.
 
-Now every "seen" vertex (vertices that are connected to explored ones) holds 3 values. G, wich stands for the distance from the starting node. This is the same value Dijkstra's algorithm holds. H, wich is the value that holds the linear distance of the selected node to the end node. And F, wich is the sum of G and H.
+Now every "seen" vertex (vertices that are connected to explored ones) holds 3 values. G, which stands for the distance from the starting node. This is the same value Dijkstra's algorithm holds. H, which is the value that holds the linear distance of the selected node to the end node. And F, which is the sum of G and H.
 
 Now when exploring the graph with A*, the node with the lowest F value will be the first visited. When two or more nodes hold the same F value, the node with the lowest H value will be visited first, since it is the closest to the end node.
 
-With these extra values, some problems where there is a huge graph involved are much easier fixed because the linear value points the pathfinding in the right direction (most of the time).
+With these extra values, some problems where there is a huge graph involved are much easier fixed because the linear value points the path finding in the right direction (most of the time).
 
 #### 3.3 Implementation
 Because of some complications (see 4. Complications) we weren't able to implement any code for the A* algorithm. Thats why we decided to just research it.
@@ -207,4 +207,4 @@ Before the study of these algorithms we studied a different subject called Boost
 After the switch to 'finding the shortest path' the biggest complication was time. Both in the amount we had to finish the study, and also with how long running the program would take.
 
 ### What we have learned
-With this study we actually learned quite a lot. Besides learning about the algorithms, we learned how important immedietly optimizing your code can be. And considering that we will most likely do our next study on another algorithm based study 'minimizing losses, maximizing profits' we will take these things we have learned into consideration from the start.
+With this study we actually learned quite a lot. Besides learning about the algorithms, we learned how important immediately optimizing your code can be. And considering that we will most likely do our next study on another algorithm based study 'minimizing losses, maximizing profits' we will take these things we have learned into consideration from the start.
